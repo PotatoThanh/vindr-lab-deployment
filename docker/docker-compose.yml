@@ -16,7 +16,7 @@ services:
       KEYCLOAK__MASTER_REALM: master
       KEYCLOAK__APP_REALM: ${KEYCLOAK_APP_REALM}
       KEYCLOAK__ADMIN_USERNAME: admin
-      KEYCLOAK__ADMIN_PASSWORD: admin
+      KEYCLOAK__ADMIN_PASSWORD: "!@#123Lingnga"
       MINIO__URI: ${MINIO_URI}
       MINIO__ACCESS_KEY_ID: ${MINIO_ACCESS_KEY}
       MINIO__SECRET_ACCESS_KEY: ${MINIO_SECRET_KEY}
@@ -208,7 +208,7 @@ services:
       - 9090
     environment:
       KEYCLOAK_USER: admin
-      KEYCLOAK_PASSWORD: admin
+      KEYCLOAK_PASSWORD: "!@#123Lingnga"
       PROXY_ADDRESS_FORWARDING: "true"
     volumes:
       - ./keycloak-db:/opt/jboss/keycloak/standalone/data
