@@ -243,7 +243,7 @@ services:
       - ./certbot/www:/var/www/certbot
     restart: always
     ports:
-      - 80:8080
+      - 8080:8080
       - 443:443
     logging:
       driver: "json-file"
