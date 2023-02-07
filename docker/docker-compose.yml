@@ -243,8 +243,7 @@ services:
       - ./certbot/www:/var/www/certbot
     restart: always
     ports:
-      - 8080:8080
-      - 80:80
+      - 80:8080
       - 443:443
     logging:
       driver: "json-file"
@@ -257,7 +256,7 @@ services:
     volumes: 
       - ./certbot/conf:/etc/letsencrypt
       - ./certbot/www:/var/www/certbot
-    command: certonly --webroot -w /var/www/certbot --force-renewal --email thanhnguyen.cse@gmail.com -d prostate.creni.org --agree-tos
+    command: certonly --webroot -w /var/www/certbot --force-renewal --email thanhnguyen.cse@gmail.com -d prostate.creni.org www.prostate.creni.org --agree-tos
 
 volumes:
   data01:
