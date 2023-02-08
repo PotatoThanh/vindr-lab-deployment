@@ -197,7 +197,7 @@ services:
         max-size: 20m
 
   keycloak:
-    image: jboss/keycloak:11.0.2
+    image: jboss/keycloak
     container_name: vinlab-keycloak
     command:
       [
