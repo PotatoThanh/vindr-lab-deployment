@@ -16,7 +16,7 @@ services:
       KEYCLOAK__MASTER_REALM: master
       KEYCLOAK__APP_REALM: ${KEYCLOAK_APP_REALM}
       KEYCLOAK__ADMIN_USERNAME: admin
-      KEYCLOAK__ADMIN_PASSWORD: "!@#123Lingnga"
+      KEYCLOAK__ADMIN_PASSWORD: admin
       MINIO__URI: ${MINIO_URI}
       MINIO__ACCESS_KEY_ID: ${MINIO_ACCESS_KEY}
       MINIO__SECRET_ACCESS_KEY: ${MINIO_SECRET_KEY}
@@ -197,7 +197,7 @@ services:
         max-size: 20m
 
   keycloak:
-    image: jboss/keycloak
+    image: jboss/keycloak:11.0.2
     container_name: vinlab-keycloak
     command:
       [
@@ -208,7 +208,7 @@ services:
       - 9090
     environment:
       KEYCLOAK_USER: admin
-      KEYCLOAK_PASSWORD: "!@#123Lingnga"
+      KEYCLOAK_PASSWORD: admin
       PROXY_ADDRESS_FORWARDING: "true"
     volumes:
       - ./keycloak-db:/opt/jboss/keycloak/standalone/data
@@ -239,25 +239,14 @@ services:
     container_name: vinlab-nginx
     volumes:
       - ./conf/nginx/nginx.conf:/etc/nginx/conf.d/default.conf
-      - ./certbot/conf:/etc/letsencrypt
-      - ./certbot/www:/var/www/certbot
     restart: always
     ports:
-      - 8080:8080
       - 80:80
-      - 443:443
     logging:
       driver: "json-file"
       options:
         max-file: "10"
         max-size: 20m
-  certbot:
-    image: certbot/certbot
-    container_name: vinlab-certbot
-    volumes: 
-      - ./certbot/conf:/etc/letsencrypt
-      - ./certbot/www:/var/www/certbot
-    command: certonly --webroot -w /var/www/certbot --force-renewal --email thanhnguyen.cse@gmail.com -d prostate.creni.org --agree-tos
 
 volumes:
   data01:
