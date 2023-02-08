@@ -1,4 +1,4 @@
-export BASE_URI="http://prostate.creni.org:8080"
+export BASE_URI="http://prostate.creni.org:80"
 
 
 export API_KEY="vindr-lab-api-key-2020" #you should set it by you own
