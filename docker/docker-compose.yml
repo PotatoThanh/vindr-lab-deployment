@@ -248,6 +248,3 @@ services:
         max-file: "10"
         max-size: 20m
 
-volumes:
-  data01:
-    driver: local
