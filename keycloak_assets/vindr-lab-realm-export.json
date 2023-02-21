@@ -804,18 +804,18 @@
     {
       "id": "6824e372-d794-43e9-a3b1-802f3407a162",
       "clientId": "vinlab-backend",
-      "rootUrl": "http://192.168.192.16:8080",
-      "adminUrl": "http://192.168.192.16:8080",
+      "rootUrl": "http://prostate.creni.org",
+      "adminUrl": "http://prostate.creni.org",
       "surrogateAuthRequired": false,
       "enabled": true,
       "alwaysDisplayInConsole": false,
       "clientAuthenticatorType": "client-secret",
       "secret": "**********",
       "redirectUris": [
-        "http://192.168.192.16:8080/*"
+        "http://prostate.creni.org/*"
       ],
       "webOrigins": [
-        "http://192.168.192.16:8080"
+        "http://prostate.creni.org"
       ],
       "notBefore": 0,
       "bearerOnly": false,
@@ -1656,18 +1656,18 @@
     {
       "id": "22e483cf-6d09-4076-8f50-9f1e2291077d",
       "clientId": "vinlab-frontend",
-      "rootUrl": "http://192.168.192.16:8080",
-      "adminUrl": "http://192.168.192.16:8080",
+      "rootUrl": "http://prostate.creni.org",
+      "adminUrl": "http://prostate.creni.org",
       "surrogateAuthRequired": false,
       "enabled": true,
       "alwaysDisplayInConsole": false,
       "clientAuthenticatorType": "client-secret",
       "secret": "**********",
       "redirectUris": [
-        "http://192.168.192.16:8080/*"
+        "http://prostate.creni.org/*"
       ],
       "webOrigins": [
-        "http://192.168.192.16:8080"
+        "http://prostate.creni.org"
       ],
       "notBefore": 0,
       "bearerOnly": false,

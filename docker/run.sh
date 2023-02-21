@@ -6,6 +6,6 @@ sudo chmod -R +777 keycloak-db
 sudo chmod -R +777 data  
 docker-compose pull
 docker-compose down
-docker-compose up -d --remove-orphans
+docker-compose up -d --build --remove-orphans
 sudo chmod -R +777 keycloak-db  
 sudo chmod -R +777 data 
