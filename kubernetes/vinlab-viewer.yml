@@ -21,7 +21,7 @@ spec:
               name: viewer-port
           env:
             - name: SERVER_BASE_URL
-              value: http://localhost:8080
+              value: http://192.168.192.16:8080
 
             - name: MEDICAL_VIEWER_URL_PREFIX
               value: /medical-view
@@ -33,19 +33,19 @@ spec:
               value: vinlab-frontend
 
             - name: OIDC_AUTHORIZATION_URI
-              value: http://localhost:8080/auth/realms/vinlab/protocol/openid-connect/auth
+              value: http://192.168.192.16:8080/auth/realms/vinlab/protocol/openid-connect/auth
 
             - name: OIDC_ACCESS_TOKEN_URI
-              value: http://localhost:8080/auth/realms/vinlab/protocol/openid-connect/token
+              value: http://192.168.192.16:8080/auth/realms/vinlab/protocol/openid-connect/token
 
             - name: OIDC_REDIRECT_URI
-              value: http://localhost:8080/dashboard
+              value: http://192.168.192.16:8080/dashboard
 
             - name: OIDC_LOGOUT_URI
-              value: http://localhost:8080/auth/realms/vinlab/protocol/openid-connect/logout
+              value: http://192.168.192.16:8080/auth/realms/vinlab/protocol/openid-connect/logout
 
             - name: OIDC_USERINFO_ENDPOINT
-              value: http://localhost:8080/auth/realms/vinlab/protocol/openid-connect/userinfo
+              value: http://192.168.192.16:8080/auth/realms/vinlab/protocol/openid-connect/userinfo
 
             - name: OIDC_AUDIENCE
               value: "vinlab-backend"
