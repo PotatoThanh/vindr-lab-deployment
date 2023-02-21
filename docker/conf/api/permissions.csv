@@ -1,5 +1,5 @@
 X,PO,ANNOTATOR,REVIEWER,PO_PARTNER,GUEST
-accounts,R,R,R,R,R
+accounts,CRUD,R,R,R,R
 annotations,CRUD,CRUD,CRUD,R,R
 labels,CRUD,R,R,CRUD,R
 label_groups,CRUD,,,CRU,
