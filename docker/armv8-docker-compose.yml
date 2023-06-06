@@ -197,9 +197,9 @@ services:
         max-size: 20m
 
   keycloak:
-    image: quay.io/keycloak/keycloak:latest
+    image: quay.io/keycloak/keycloak:17.0.0
     container_name: vinlab-keycloak
-    command: start-dev --http-enabled=true --http-port=9090 --http-relative-path /auth
+    command: start-dev --http-enabled=true --http-port=9090 --http-relative-path /auth --features scripts
     ports:
       - 9090
     environment:
