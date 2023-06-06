@@ -1,7 +1,11 @@
-export BASE_URI="http://prostate.creni.org"
+# Check if the first argument is "-dev"
+if [ "$1" = "dev" ]; then
+    export BASE_URI="http://localhost:8080"
+else
+    export BASE_URI="http://prostate.creni.org"
+fi
 
-
-export API_KEY="vindr-lab-api-key-2020" #you should set it by you own
+export API_KEY="vindr-lab-api-key-2020" #you should set it by your own
 export API_URI="http://vinlab-api:8080"
 export IDGEN_URI="http://vinlab-idgen:8080"
 export RQLITE_URI="http://vinlab-rqlite:4001"
