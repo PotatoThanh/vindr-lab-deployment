@@ -1,6 +1,7 @@
 FROM node:16
 WORKDIR /usr/src/app
-COPY package*.json ./
+COPY services/ortanc-proxy/package.json ./
+COPY services/ortanc-proxy/yarn.lock ./
 
 RUN yarn install
 COPY services/ortanc-proxy/. .
