@@ -33,6 +33,18 @@ services:
       - minio
       - idgen
 
+  ortanc-proxy:
+      build: 
+        context: .
+        dockerfile: services/ortanc-proxy/Dockerfile
+      container_name: vinlab-ortanc-proxy
+      environment:
+        ORTANC_PROXY_PORT: 3333
+        APP_ORTANC_API_URI: ${ORTHANC_URI}
+      ports:
+        - 3333
+      restart: always
+
   idgen:
     image: vindr/vinlab-idgen
     container_name: vinlab-idgen

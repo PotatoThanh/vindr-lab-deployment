@@ -4,6 +4,7 @@ if [ "$1" = "dev" ]; then
 else
     export BASE_URI="http://prostate.creni.org"
 fi
+export ORTHANC_PROXY_URI="http://localhost:3000"
 
 export API_KEY="vindr-lab-api-key-2020" #you should set it by your own
 export API_URI="http://vinlab-api:8080"

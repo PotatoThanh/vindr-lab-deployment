@@ -1,2 +1,3 @@
 /docker/data/
 /docker/keycloak-db/
+/docker/services/ortanc-proxy/node_modules/
