@@ -33,6 +33,18 @@ services:
       - minio
       - idgen
 
+  ortanc-proxy:
+      build: 
+        context: .
+        dockerfile: services/ortanc-proxy/Dockerfile
+      container_name: vinlab-ortanc-proxy
+      environment:
+        ORTANC_PROXY_PORT: 3333
+        APP_ORTANC_API_URI: ${ORTHANC_URI}
+      ports:
+        - 3333
+      restart: always
+
   idgen:
     image: vindr/vinlab-idgen
     container_name: vinlab-idgen
@@ -197,9 +209,9 @@ services:
         max-size: 20m
 
   keycloak:
-    image: quay.io/keycloak/keycloak:17.0.0
+    image: quay.io/keycloak/keycloak:18.0.0
     container_name: vinlab-keycloak
-    command: start-dev --http-enabled=true --http-port=9090 --http-relative-path /auth --features scripts
+    command: start-dev --log-level=ERROR --http-enabled=true --http-port=9090 --http-relative-path /auth --features scripts
     ports:
       - 9090
     environment:
